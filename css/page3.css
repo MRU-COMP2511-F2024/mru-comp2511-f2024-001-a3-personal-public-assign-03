@@ -1,0 +1,193 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: brown;
+}
+
+header {
+    background: darkgreen;
+    color: burlywood;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: burlywood;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background: #d0c258;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #2c5034;
+    color: burlywood;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #0d6fd0;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+label {
+    margin-top: 10px;
+}
+input, textarea, select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+button:hover {
+    background: #34495e;
+}
+
+
+
+
+
+
+@media (max-width: 590px) {
+    body {
+        display: block;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+   
+        nav ul li {
+            display: block;
+            margin: 10px 0;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+    
+
+    header h1 {
+        font-size: 24px;
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    main {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section h2 {
+        font-size: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section p {
+        font-size: 14px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    img {
+        max-width: 50%;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+   
+}
+
+
+@media (min-width: 600px) and (max-width: 900px) {
+    nav ul li {
+        display: inline;
+        margin: 0 10px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    section p {
+        font-size: 16px;
+    }
+
+    img {
+        max-width: 80%;
+        height: auto;
+    }
+
+   
+}
