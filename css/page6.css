@@ -32,6 +32,11 @@ nav a {
     text-decoration: none;
 }
 
+.text-burlywood {
+    color: burlywood !important;
+}
+
+
 nav a:hover {
     text-decoration: underline;
 }
