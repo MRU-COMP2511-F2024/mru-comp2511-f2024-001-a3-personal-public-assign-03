@@ -99,19 +99,22 @@ button:hover {
 
 
 
-/* Styles for small devices (mobile) */
+
 @media (max-width: 590px) {
     body {
         display: block;
         justify-content: center;
         display: grid;
         grid-template-columns: 1fr;
+        flex-direction: column;
     }
    
         nav ul li {
             display: block;
             margin: 10px 0;
             text-align: center;
+            justify-content: center;
+            align-items: center;
         }
     
 
@@ -120,6 +123,9 @@ button:hover {
         display: block;
         margin: 10px 0;
         text-align: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 
     main {
@@ -127,29 +133,36 @@ button:hover {
         margin: 10px 0;
         text-align: center;
         padding: 10px;
+        justify-content: center;
+        align-items: center;
     }
 
     section h2 {
         font-size: 20px;
+        justify-content: center;
+        align-items: center;
     }
 
     section p {
         font-size: 14px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 
     img {
-        max-width: 100%;
+        max-width: 50%;
         height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
-    pre {
-        font-size: 12px; /* Smaller font size for code snippets */
-        overflow-x: auto; /* Allow horizontal scrolling for long lines */
-    }
+   
 }
 
-/* Styles for medium devices (tablet) */
-@media (min-width: 601px) and (max-width: 900px) {
+
+@media (min-width: 600px) and (max-width: 900px) {
     nav ul li {
         display: inline;
         margin: 0 10px;
@@ -172,11 +185,9 @@ button:hover {
     }
 
     img {
-        max-width: 100%;
+        max-width: 80%;
         height: auto;
     }
 
-    pre {
-        font-size: 14px; /* Slightly larger font size for code snippets */
-    }
+   
 }
