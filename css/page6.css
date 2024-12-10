@@ -123,6 +123,10 @@ button:hover {
         text-align: center;
     }
 
+    .text-burlywood {
+        color: burlywood !important;
+    }
+
     nav ul li {
        
         text-align: center;
