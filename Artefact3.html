@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Programming Project</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Projects.html">Projects</a></li>
+                <li><a href="Artefact3.html">Next Page</a></li>
+                <li><a href="Artefact four.html">More Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Project Overview</h2>
+            <p>This project involved creating a Toy Inventory Management System using Java. 
+                The application allows users to manage a list of toys, including adding, removing, and purchasing toys, 
+                as well as making gift suggestions based on user input.</p>
+            <img src="images/appdriver.png" alt="App Driver">
+            <img src="images/toyinventory.png" alt="Toy Inventory Management System">
+
+        </section>
+
+        <section>
+            <h2>Data Structures Used</h2>
+            <p>The primary data structure used in this project is a <strong>List</strong> (specifically, an <code>ArrayList</code>) to store the inventory of toys. Each toy is represented as an object of the <code>Toy</code> class or its subclasses (<code>Figures</code>, <code>Animal</code>, <code>Puzzles</code>, and <code>BoardGames</code>). This allows for polymorphism and easy management of different toy types.</p>
+            <p>Additionally, the application uses a <code>Scanner</code> object for user input and file handling classes like <code>BufferedReader</code> and <code>BufferedWriter</code> for reading from and writing to files.</p>
+        </section>
+
+        <section>
+            <h2>Challenges Faced</h2>
+            <p>One of the main challenges I faced was ensuring that the application could handle various user inputs gracefully. To overcome this, I implemented input validation throughout the code, checking for valid serial numbers, toy types, and price values. This helped prevent runtime errors and ensured a smooth user experience.</p>
+            <p>Another challenge was managing the file I/O operations. I had to ensure that the data was correctly formatted in the text file and that the application could read and write data without errors. I addressed this by implementing exception handling to catch and manage potential I/O issues.</p>
+        </section>
+
+        <section>
+            <h2>Workflow and Competence</h2>
+            <p>My workflow for this project was systematic and organized. I began by outlining the requirements and functionalities of the application. I then designed the class structure, focusing on the <code>Toy</code> class and its subclasses to encapsulate the properties and behaviors of different toy types.</p>
+            <p>After implementing the core functionalities, I conducted thorough testing to ensure that all features worked as intended. I also sought feedback from peers to identify any areas for improvement. The final product was a robust application that successfully managed toy inventory and provided a user-friendly interface.</p>
+        </section>
+
+        <section>
+            <h2>Code Snippet</h2>
+            <pre>
+<code>
+package application;
+
+import java.util.Scanner;
+import controller.ToyInventoryManager;
+import view.ToyMenu;
+
+public class AppDriver {
+    public static void main(String[] args) {
+        ToyInventoryManager inventoryManager = new ToyInventoryManager();
+        ToyMenu menu = new ToyMenu();
+        Scanner scanner = new Scanner(System.in);
+        int option;
+
+        inventoryManager.loadToysFromFile();
+        menu.welcome();
+
+        do {
+            option = menu.mainMenu();
+            switch (option) {
+                case 1:
+                    inventoryManager.searchAndPurchaseToy(scanner);
+                    break;
+                case 2:
+                    inventoryManager.addNewToy(scanner);
+                    break;
+                case 3:
+                    inventoryManager.removeToy(scanner);
+                    break;
+                case 4:
+                    inventoryManager.makeGiftSuggestion(scanner);
+                    break;
+                case 5:
+                    inventoryManager.saveToysToFile();
+                    System.out.println("\nSaving Data Into Database...\n************ THANKS FOR VISITING US! ************");
+                    break;
+                default:
+                    System.out.println("Invalid option. Please try again.");
+            }
+
+            if (option != 5) {
+                System.out.println("\nPress Enter to continue...");
+                scanner.nextLine();
+                scanner.nextLine();
+            }
+        } while (option != 5);
+
+        scanner.close();
+    }
+}
+</code>
+            </pre>
+        </section>
+
+        <section>
+            <h2>Results</h2>
+            <p>Here is the ouptut from the project:</p>
+            <img src="images/result.png" alt="Toy Inventory Management Interface">
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mary Obi-Azubuike. All rights reserved.</p></p>
+    </footer>
+</body>
+</html>
